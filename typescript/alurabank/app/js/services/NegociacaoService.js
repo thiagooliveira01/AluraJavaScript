@@ -17,7 +17,7 @@ System.register(["../models/index"], function (exports_1, context_1) {
                         .then((dados) => dados.map(dado => new index_1.Negociacao(new Date(), dado.vezes, dado.montante)))
                         .catch(err => {
                         console.log(err.message);
-                        throw new Error(err.message);
+                        throw new Error('Não foi possível carregar as Negociações');
                     });
                 }
             };
